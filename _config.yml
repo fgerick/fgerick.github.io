@@ -94,14 +94,14 @@ analytics:
 # Site Author
 author:
   name             : " "
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "PhD in rotating fluid dynamics."
-  location         : "Somewhere"
+  avatar           : /assets/images/avatar_github.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "PhD student in rotating fluid dynamics at the Université Grenoble Alpes and ETH Zürich."
+  location         : "Zürich, Switzerland"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:felix.gerick@univ-grenoble-alpes.fr
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
