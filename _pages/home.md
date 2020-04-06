@@ -5,4 +5,4 @@ permalink: /
 title: Home
 ---
 
-hello word!
+Welcome!
