@@ -5,7 +5,7 @@ permalink: /publications/
 title: Publications
 ---
 
-**Gerick, F.**, Jault, D., Noir, J., Vidal, J., 2020. Pressure torque of torsional Alfvén modes acting on an ellipsoidal mantle. Geophysical Journal International, in print. [10.1093/gji/ggaa166](https://doi.org/10.1093/gji/ggaa166), [arXiv:2004.01597](https://arxiv.org/abs/2004.01597)
+**Gerick, F.**, Jault, D., Noir, J., Vidal, J., 2020. Pressure torque of torsional Alfvén modes acting on an ellipsoidal mantle. Geophysical Journal International 222(1), 338-351. [10.1093/gji/ggaa166](https://doi.org/10.1093/gji/ggaa166), [arXiv:2004.01597](https://arxiv.org/abs/2004.01597)
 
 **Gerick, F.**, Saur, J., von Papen, M., 2017. The Uncertainty of Local Background Magnetic Field Orientation in Anisotropic Plasma Turbulence. The Astrophysical Journal 843(1), 5. [10.3847/1538-4357/aa767c](https://doi.org/10.3847/1538-4357/aa767c)
 
