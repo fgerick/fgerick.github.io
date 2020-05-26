@@ -27,7 +27,7 @@ In collaboration with the Earth and Planetary Magnetism Group at Institute of Ge
 
 ## Professional & Academic Experience
 
-#### Academic Guest (2019 - 2020)
+#### Academic Guest (2018 - 2020)
 *ETH Zürich*
 
 #### Research assistant (2014 - 2017)
@@ -39,4 +39,4 @@ In collaboration with the Earth and Planetary Magnetism Group at Institute of Ge
 ## Scholarships
 
 #### Germany Scholarship (2016 - 2017)
-*Federal Ministry of Education and Research, Germany*
+*Federal Ministry of Education and Research of Germany*
