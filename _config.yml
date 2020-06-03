@@ -99,9 +99,9 @@ author:
   location         : "Zürich, Switzerland"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:felix.gerick@univ-grenoble-alpes.fr
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: mailto:fg@fg.fg
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
