@@ -15,12 +15,12 @@ In collaboration with the Earth and Planetary Magnetism Group at Institute of Ge
 #### MSc in Physics of the Earth and Atmosphere (2015 - 2017)
 *University of Cologne*
 
-[Space-time correlations and anisotropy of Lagrangian particle dispersion in magnetohydrodynamic turbulence.](/assets/documents/gerick_msc_2017.pdf)
+Space-time correlations and anisotropy of Lagrangian particle dispersion in magnetohydrodynamic turbulence.
 
 #### BSc in Geophysics and Meteorology (2011 - 2015)
 *University of Cologne*
 
-[Anisotropy of turbulence in the solar wind in dependence of the local magnetic field scales. (German)](/assets/documents/gerick_bsc_2015.pdf)
+Anisotropy of turbulence in the solar wind in dependence of the local magnetic field scales.
 
 #### German High School (2002 - 2010)
 *Abtei-Gymnasium-Brauweiler*
