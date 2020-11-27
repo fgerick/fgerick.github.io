@@ -4,6 +4,7 @@ author_profile: true
 permalink: /publications/
 title: Publications
 ---
+**Gerick, F.**, Jault, D., Noir, J., 2020. Fast Quasi-Geostrophic Magneto-Coriolis Modes in the Earth's Core. Geophysical Research Letters, accepted.
 
 **Gerick, F.**, Jault, D., Noir, J., Vidal, J., 2020. Pressure torque of torsional Alfvén modes acting on an ellipsoidal mantle. Geophysical Journal International 222(1), 338-351. [10.1093/gji/ggaa166](https://academic.oup.com/gji/advance-article/doi/10.1093/gji/ggaa166/5820227?guestAccessKey=32c231aa-1d10-44d9-901a-02eb871d510b)
 
