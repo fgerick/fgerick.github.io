@@ -7,10 +7,14 @@ title: Curriculum vitae
 
 ## Education
 
-#### PhD in geophysics (since 2017)
+#### PhD in Earth, Space and Environmental sciences (2017 - 2020)
 *Équipe Géodynamo, ISTerre, Université Grenoble Alpes*
 
-In collaboration with the Earth and Planetary Magnetism Group at Institute of Geophysics, ETH Zürich.
+
+Fast Magneto-Coriolis Modes and Pressure Torques arising from Torsional Alfvén Modes in Planetary Cores
+
+In collaboration with the Earth and Planetary Magnetism Group at Institute of Geophysics, ETH Zürich. Under the supervision of Dominique Jault at ISTerre and Jerome Noir at ETH Zurich.
+
 
 #### MSc in Physics of the Earth and Atmosphere (2015 - 2017)
 *University of Cologne*
