@@ -95,8 +95,8 @@ analytics:
 author:
   name             : " "
   avatar           : /assets/images/avatar_github.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "PhD student in rotating fluid dynamics at the Université Grenoble Alpes and ETH Zürich."
-  location         : "Grenoble, France"
+  bio              : "Postdoctoral researcher at the Royal Observatory of Belgium"
+  location         : "Brussels, Belgium"
   email            :
   links:
     # - label: "Email"

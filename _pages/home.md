@@ -5,4 +5,4 @@ permalink: /
 title: Home
 ---
 
-Welcome! I'm a PhD student at the Institute des Sciences de la Terre at the Université Grenoble Alpes in collaboration with the Institute of Geophysics at the ETH Zürich. To investigate the topographic coupling of torsional Alfvén modes in a liquid and conducting planetary core with a solid enclosing mantle I combine theoretical approaches, reduced models and numerical tools.
+Welcome! I'm currently a postdoctoral researcher at the Royal Observatory of Belgium in Brussels working on hydromagnetic modes in liquid and conducting planetary cores and their influence on the rotation and magnetic field of the planet. I am part of the [GRACEFUL](https://graceful.oma.be/) project and the [4D-Earth-Swarm](https://4d-earth-swarm.univ-grenoble-alpes.fr/) collaboration.
