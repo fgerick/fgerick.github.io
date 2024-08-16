@@ -12,11 +12,10 @@
 @def generate_rss = true
 @def website_title = "Felix Gerick"
 @def website_descr = "Postdoctoral researcher in Geophysical Fluid Dynamics"
-@def rss_website_url   = "https://fgerick.github.io"
-@def rss_full_content = true 
+@def website_url   = "https://fgerick.github.io"
 
 @def author = "Felix Gerick"
-<!-- @def mintoclevel = 2 -->
+@def mintoclevel = 2
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
