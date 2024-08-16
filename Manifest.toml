@@ -2,7 +2,7 @@
 
 julia_version = "1.10.4"
 manifest_format = "2.0"
-project_hash = "693100e2048ed564956b681fa23bb378cde58c34"
+project_hash = "c31be435faaef0fccafd86bc0c72da2bb9b70efa"
 
 [[deps.AbstractTrees]]
 git-tree-sha1 = "2d9c9a55f9c93e8887ad391fbae72f8ef55e1177"
@@ -506,6 +506,12 @@ version = "1.0.1"
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 version = "0.7.0"
 
+[[deps.Sass]]
+deps = ["libsass_jll"]
+git-tree-sha1 = "aa841c3738cec78b5dbccd56dda332710f35f6a5"
+uuid = "322a6be2-4ae8-5d68-aaf1-3e960788d1d9"
+version = "0.2.0"
+
 [[deps.Scratch]]
 deps = ["Dates"]
 git-tree-sha1 = "3bac05bc7e74a75fd9cba4295cde4045d9fe2386"
@@ -650,6 +656,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Zlib_jll"]
 git-tree-sha1 = "d7015d2e18a5fd9a4f47de711837e980519781a4"
 uuid = "b53b4c65-9356-5827-b1ea-8c7a1a84506f"
 version = "1.6.43+1"
+
+[[deps.libsass_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl"]
+git-tree-sha1 = "6044ffe7e7bf0602e2039dc747c3332a097ac74b"
+uuid = "47bcb7c8-5119-555a-9eeb-0afcc36cd728"
+version = "3.6.6+0"
 
 [[deps.nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]
