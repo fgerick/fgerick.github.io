@@ -6,7 +6,8 @@ tags = ["publications"]
 +++
 
 ## Publications 
-**Gerick, F.**, and Livermore, P., 2024. Interannual Magneto-Coriolis modes and their sensitivity on the magnetic field within the Earth's core. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, in press; [arXiv:2403.03011](https://doi.org/10.48550/arXiv.2403.03011).
+
+**Gerick, F.**, and Livermore, P., 2024. Interannual Magneto-Coriolis modes and their sensitivity on the magnetic field within the Earth's core. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 480(2299), 20240184. [10.1098/rspa.2024.0184](https://doi.org/10.1098/rspa.2024.0184)
 
 Gillet, N., **Gerick, F.**, Jault, D., Schwaiger, T., Aubert, J., and Istas, M., 2022. Satellite magnetic data reveal interannual waves in Earth’s core. Proceedings of the National Academy of Sciences 119(13), e2115258119.
 [10.1073/pnas.2115258119](https://doi.org/10.1073/pnas.2115258119)
