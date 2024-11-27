@@ -28,6 +28,14 @@ Gillet, N., **Gerick, F.**, Angappan, R., and Jault, D., 2022. A dynamical prosp
 von Papen, M., Dafsari, H., Florin, E., **Gerick, F.**, Timmermann, L., and Saur, J., 2017. Phase-coherence classification: A new wavelet-based method to separate local field potentials into local (in)coherent and volume-conducted components. Journal of Neuroscience Methods 291, 198–212. [10.1016/j.jneumeth.2017.08.021](https://doi.org/10.1016/j.jneumeth.2017.08.021), [bioRxiv:10.1101/085605v1](https://www.biorxiv.org/content/10.1101/085605v1)
 
 
+## News
+
+[ESA, 2024. ESA Principal Investigators awarded for contributions to Earth science.](https://eo4society.esa.int/2024/09/26/esa-principal-investigators-awarded-for-contributions-to-earth-science/)
+
+[CNRS, 2022. Détection d’ondes hydromagnétiques rapides dans le noyau de la Terre.](https://www.insu.cnrs.fr/fr/cnrsinfo/detection-dondes-hydromagnetiques-rapides-dans-le-noyau-de-la-terre)
+
+[ESA, 2022. Swarm unveils magnetic waves deep down.](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Swarm/Swarm_unveils_magnetic_waves_deep_down)
+
 
 ## Conference Papers
 

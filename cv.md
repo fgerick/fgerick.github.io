@@ -18,12 +18,6 @@ Within the group of Mioara Mandea.
 
 Within the group of Véronique Dehant.
 
-<!-- #### Academic Guest (2018 - 2020)
-*ETH Zürich, Institute of Geophysics*
-
-Guest doctoral-researcher with Jérõme Noir in the Earth and Planetary Magnetism group. -->
-
-
 ## Education
 
 #### PhD in Earth, Space and Environmental sciences (2017 - 2020)
@@ -64,3 +58,10 @@ Under the supervision of Joachim Saur.
 
 #### Germany Scholarship (2016 - 2017, Principal Investigator)
 *Federal Ministry of Education and Research of Germany*
+
+## Awards
+
+#### Doornbos Memorial prize (2024)
+*Committee on Studies of the Earth's Deep Interior (SEDI)*
+
+"For key contributions in characterising and identifying the signature of rapid magneto-Coriolis waves in temporal variations of the geomagnetic field, opening the way to infer properties of the magnetic field within the core."
