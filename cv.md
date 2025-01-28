@@ -25,7 +25,7 @@ Within the group of Véronique Dehant.
 
 Fast Magneto-Coriolis Modes and Pressure Torques arising from Torsional Alfvén Modes in Planetary Cores
 
-Under the supervision of Dominique Jault in Grenoble and Jérõme Noir in Zürich.
+Under the supervision of Dominique Jault in Grenoble and Jérôme Noir in Zürich.
 
 
 #### MSc in Physics of the Earth and Atmosphere (2015 - 2017)
