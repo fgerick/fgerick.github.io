@@ -7,7 +7,7 @@ tags = ["publications"]
 
 ## Publications 
 
-Dumberry, M., **Gerick, F.**, and Gillet, N., 2025. Millennial axially-symmetric Magneto-Coriolis modes in Earth’s fluid core. Geophysical Journal International, in press. [10.1093/gji/ggaf025](https://doi.org/10.1093/gji/ggaf025)
+Dumberry, M., **Gerick, F.**, and Gillet, N., 2025. Millennial axially-symmetric Magneto-Coriolis modes in Earth’s fluid core. Geophysical Journal International, 240(3), 2076–2090. [10.1093/gji/ggaf025](https://doi.org/10.1093/gji/ggaf025)
 
 **Gerick, F.**, and Livermore, P., 2024. Interannual Magneto-Coriolis modes and their sensitivity on the magnetic field within the Earth's core. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 480(2299), 20240184. [10.1098/rspa.2024.0184](https://doi.org/10.1098/rspa.2024.0184)
 
