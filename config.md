@@ -27,6 +27,8 @@ you might not want. Indicate directories by ending the name with a `/`.
 <!--
 Add here global latex commands to use throughout your pages.
 -->
+\newcommand{\collapse}[2]{~~~<button class="collapsible">~~~ #1 ~~~</button><div class="collapsiblecontent">~~~ #2 ~~~</div>~~~}
+
 \newcommand{\R}{\mathbb R}
 \newcommand{\scal}[1]{\langle #1 \rangle}
 \newcommand{\vec}{\mathbf}
