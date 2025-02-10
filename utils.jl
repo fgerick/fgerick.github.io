@@ -42,3 +42,26 @@ function hfun_figurelightdark(fnames)
   </picture>"""
   return generated_html
 end
+
+function hfun_htmlfigurelightdark(fnames)
+  generated_html = """
+      <p align="center">
+      <iframe id="content-frame" style="width: $(fnames[3])px; height: $(fnames[4])px; border: none"></iframe>
+      </p>
+
+    <script>
+        function loadContent() {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const fileToLoad = prefersDark ? "/assets/$(fnames[2])" : "/assets/$(fnames[1])";
+            document.getElementById("content-frame").src = fileToLoad;
+        }
+
+        // Initial load
+        loadContent();
+
+        // Listen for dark mode changes
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", loadContent);
+    </script>
+  """
+  return generated_html
+end
