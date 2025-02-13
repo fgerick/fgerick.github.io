@@ -40,7 +40,7 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: var(--normal);
   color: var(--text-color);
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
 
 /* ==================================================================
@@ -356,4 +356,36 @@ code {
   margin-bottom: 5px;
   border-radius: 0 10px 10px 0;
   border-left: 5px solid #4c9cf1;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+	background-color: var(--bg-color);
+	color: var(--block-background);
+	cursor: pointer;
+	/* padding: 18px; */
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: inherit;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .collapsiblecontent {
+	display: none;
+	overflow: hidden;
+	background-color: var(--bg-color);
+  }
+
+  .collapsible::before {
+    content: attr(collapsed-symbol,"▶ "); 
+  }
+
+  .content-frame {
+    width: 100%; /* Adjust width as needed */
+    border: none;
+    overflow: hidden;
+    text-align: center;
+    /* transition: height 0.2s ease-in-out; */
 }
