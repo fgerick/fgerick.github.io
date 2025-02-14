@@ -54,7 +54,7 @@ end
     out *= """
     <a href="../$(ele.link)" class="im-20">
     <li class="im-20">
-    <img src=\"$(ele.img)\" />
+    <img src="$(ele.img)" />
     <span class="im-20">
    $(ele.title) <br> ($(ele.date))
    </span>
