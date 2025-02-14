@@ -376,6 +376,7 @@ code {
 	display: none;
 	overflow: hidden;
 	background-color: var(--bg-color);
+  padding: 20px;
   }
 
   .collapsible::before {
@@ -389,3 +390,30 @@ code {
     text-align: center;
     /* transition: height 0.2s ease-in-out; */
 }
+
+.im-20 img {
+   float: left;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--link-color);
+}
+
+.im-20 li {
+  display: flex;
+  align-items: center; /* Align text and image */
+  gap: 10px; /* Space between image and text */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.im-20:hover img {
+  border: 2px solid var(--hover-color);
+}
+
+.im-20:hover li {
+  color: var(--hover-color);
+}
+
+
+

@@ -1,7 +1,6 @@
 +++
 title = "Publications"
 hascode = true
-hasmath = true
 tags = ["publications"]
 +++
 

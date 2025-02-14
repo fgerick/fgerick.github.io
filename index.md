@@ -1,6 +1,5 @@
 @def title = "Felix Gerick"
 @def tags = ["home"]
-@def hasmath = true
 
 ## Welcome!
 

@@ -7,6 +7,7 @@
 # you might not want. Indicate directories by ending the name with a `/`.
 # Base files such as LICENSE.md and README.md are ignored by default.
 @def ignore = ["node_modules/"]
+@def ignore = ["wip/"]
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 @def generate_rss = true
@@ -16,6 +17,8 @@
 
 @def author = "Felix Gerick"
 @def mintoclevel = 2
+@def postheader = ""
+
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise

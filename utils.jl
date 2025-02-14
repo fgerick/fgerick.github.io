@@ -24,6 +24,7 @@ end
       fi = "posts/" * first(splitext(post))
       title = pagevar(fi, :title)
       date = pagevar(fi, :date)
+      # img = pagevar(fi, :postheader)
       push!(posts, (; title, link=fi, date))
   end
 
@@ -33,6 +34,38 @@ end
   end
 
   return fd2html(markdown, internal=true)
+end
+
+@delay function hfun_blogpostsimg()
+  list = readdir("posts")
+  filter!(f -> endswith(f, ".md") && f != "index.md" , list)
+  
+  posts = []
+  for (k, post) in enumerate(list)
+      fi = "posts/" * first(splitext(post))
+      title = pagevar(fi, :title)
+      date = pagevar(fi, :date)
+      img = pagevar(fi, :postheader)
+      push!(posts, (; title, link=fi, date, img))
+  end
+
+  out = "<ul>"
+  for ele in sort(posts, by=x->x.date, rev=true)
+    out *= """
+    <a href="../$(ele.link)" class="im-20">
+    <li class="im-20">
+    <img src=\"$(ele.img)\" />
+    <span class="im-20">
+   $(ele.title) <br> ($(ele.date))
+   </span>
+  </li>
+  </a>
+  """
+  end
+  out*="</ul>"
+
+  return out 
+  # return fd2html(out, internal=true)
 end
 
 function hfun_figurelightdark(fnames)
@@ -64,4 +97,45 @@ function hfun_htmlfigurelightdark(fnames)
     </script>
   """
   return generated_html
+end
+
+using DocumenterCitations
+using DocumenterCitations: CitationBibliography, CitationLink, format_citation, format_bibliography_reference
+
+const style = :authoryear
+bib = CitationBibliography("refs.bib"; style)
+page_citations = Dict()
+
+function lx_citeP(com, _)
+  # leave this first line, it extracts the content of the brace
+  key = Franklin.content(com.braces[1])
+  cit = CitationLink("[$(key)](@citep)")
+  citations = Dict(k=>1 for k in cit.keys)
+  for k in cit.keys
+    page_citations[k] = 1
+  end
+  citat =  format_citation(style, cit, bib.entries, citations)
+  citat = replace(citat,r"]\((.*?)\)"=>"](#references)") #hack around
+  return citat
+end
+
+function lx_citeT(com, _)
+  # leave this first line, it extracts the content of the brace
+  key = Franklin.content(com.braces[1])
+  cit = CitationLink("[$(key)](@citet)")
+  citations = Dict(k=>1 for k in cit.keys)
+  for k in cit.keys
+    page_citations[k] = 1
+  end
+  citat =  format_citation(style, cit, bib.entries, citations)
+  citat = replace(citat,r"]\((.*?)\)"=>"](#references)") #hack around
+  return citat
+end
+
+function lx_bibliography(com,_)
+  out = ""
+  for key in keys(page_citations)
+    out *= "* "*format_bibliography_reference(style, bib.entries[key])*"\n"
+  end
+  return out
 end

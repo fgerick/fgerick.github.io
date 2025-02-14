@@ -1,7 +1,6 @@
 +++
 title = "CV"
 hascode = true
-hasmath = true
 tags = ["cv"]
 +++
 

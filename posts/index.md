@@ -5,4 +5,4 @@ hasmath = true
 tags = ["posts"]
 +++
 
-{{recentblogposts}}
+{{blogpostsimg}}

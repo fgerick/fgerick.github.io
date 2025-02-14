@@ -1,0 +1,4 @@
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+CatppuccinMakieThemes = "c37c50e1-20da-4a65-b669-80e6e9abe7a3"
+Limace = "586a1cab-6cd8-47f7-be84-7810086014ba"
