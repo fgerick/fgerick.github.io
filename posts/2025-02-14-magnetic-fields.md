@@ -140,7 +140,7 @@ It is interesting to note here, that only the $n=1$ degree has a non-zero compon
 By definition, all $T_{ln}(1)=0$.
 
 ```julia
-T(l,n) = r->Limace.t(b, l,m,n,r) #access the poloidal scalar function (identical for all m)
+T(l,n) = r->Limace.t(b, l,m,n,r) #access the toroidal scalar function (identical for all m)
 
 f = Figure(size=(500,300))
 ax = Axis(f[1,1], xlabel=L"r", ylabel=L"T_{ln}(r)")

@@ -56,7 +56,7 @@ end
     <li class="im-20">
     <img src="$(ele.img)"></img>
     <span class="im-20">
-   $(ele.title) <br> ($(ele.date))
+   $(ele.title) <br /> ($(ele.date))
    </span>
   </li>
   </a>
