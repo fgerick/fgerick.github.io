@@ -103,7 +103,7 @@ using DocumenterCitations
 using DocumenterCitations: CitationBibliography, CitationLink, format_citation, format_bibliography_reference
 
 const style = :authoryear
-bib = CitationBibliography("refs.bib"; style)
+const bib = CitationBibliography("refs.bib"; style)
 page_citations = Dict()
 
 function lx_citeP(com, _)
@@ -137,5 +137,6 @@ function lx_bibliography(com,_)
   for key in keys(page_citations)
     out *= "* "*format_bibliography_reference(style, bib.entries[key])*"\n"
   end
+  empty!(page_citations)
   return out
 end
