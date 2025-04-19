@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <!-- <link rel="stylesheet" href="/libs/highlight/styles/github.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@catppuccin/highlightjs@0.1.4/css/catppuccin-latte.css">
+<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="//cdn.jsdelivr.net/npm/@catppuccin/highlightjs@0.1.4/css/catppuccin-mocha.css">   
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon-gerick.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+   <title>Magnetic field visualization. II. Meridional slices</title>  
+</head>
+<body>
+  <header>
+<div class="blog-name"><a href="/">Felix Gerick</a>
+<br>
+  <a href="https://github.com/fgerick" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://scholar.google.com/citations?user=2mU7llYAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+  <a href="https://www.researchgate.net/profile/Felix_Gerick" target="_blank"><i class="fab fa-researchgate"></i></a>
+  <a href="https://orcid.org/0000-0001-9924-0562" target="_blank"><i class="ai ai-orcid"></i></a>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/posts/">Posts</a></li>
+    <li><a href="/codes/">Codes</a></li>
+    <li><a href="/cv/">CV</a></li>
+    <li><a href="/publications/">Publications</a></li>
+  </ul>
+  <!-- directly include hamburger svg: -->
+  <svg height="32px" id="menu-icon" version="1.1" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path fill="var(--link-color)" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+</nav>
+</header>
+
+
+<!-- Content appended here -->
+<div class="franklin-content">
+<h1 id="title"><a href="#title" class="header-anchor">Magnetic field visualization. II. Meridional slices</a></h1>
+<p>In <a href="/posts/2025-02-14-magnetic-fields">part I</a> of the magnetic field visualization we have introduced the basic nomenclature of the magnetic field and it&#39;s spectral components. And we have setup our environment to visualize the magnetic field and its components using <a href="https://github.com/fgerick/Limace.jl">Limace.jl</a>.</p>
+<p>From here, we can visualize the actual magnetic field in two-dimensional plots, for example in meridional slices.</p>
+<p>Let us define a <code>BasisElement</code>, consisting of one component of a <code>Poloidal</code> or <code>Toroidal</code> magnetic field element, of spherical harmonic degree <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span>, order <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> and radial degree <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>:</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">using</span> Limace
+
+N = <span class="hljs-number">5</span>
+b = Insulating(N)
+
+l,m,n = <span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span> <span class="hljs-comment"># spherical harmonic degree l and order m , and radial degree n.</span>
+factor = <span class="hljs-number">1.0</span> <span class="hljs-comment"># amplitude or factor of the component</span>
+
+B_p_101 = BasisElement(b, Poloidal, (l,m,n), factor)</code></pre>
+<p>We have used here the basis <a href="https://fgerick.github.io/Limace.jl/dev/bases/#Insulating-magnetic-field-basis"><code>Insulating</code></a>, as defined in <a href="#references">Gerick and Livermore &#40;2024&#41;</a>. At the surface &#40;<code>r&#61;1</code>&#41;, these basis elements match a potential field &#40;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><mo>−</mo><mi mathvariant="normal">∇</mi><mi mathvariant="normal">Φ</mi><mo>∼</mo><mo>−</mo><mi mathvariant="normal">∇</mi><msup><mi>r</mi><mrow><mo>−</mo><mo stretchy="false">(</mo><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><msubsup><mi>Y</mi><mi>l</mi><mi>m</mi></msubsup></mrow><annotation encoding="application/x-tex">\sim -\nabla \Phi \sim -\nabla r^{-(l+1)}Y_l^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">∇Φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1711em;vertical-align:-0.2831em;"></span><span class="mord">−</span><span class="mord">∇</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-2.4169em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2831em;"><span></span></span></span></span></span></span></span></span></span>&#41;. We can discretize this basis element <code>B_p_101</code> on a grid</p>
+<pre><code class="julia hljs">nr,nθ = <span class="hljs-number">50</span>,<span class="hljs-number">50</span>
+rmax = <span class="hljs-number">2.0</span>  <span class="hljs-comment">#we can discretize at r&gt;1 for this poloidal field.</span>
+r = range(<span class="hljs-number">1e-9</span>,<span class="hljs-number">2</span>rmax,length=nr)
+θ = range(<span class="hljs-number">0</span>,<span class="hljs-literal">π</span>,length=nθ)
+x = r .* sin.(θ&#x27;)
+y = r .* cos.(θ&#x27;)
+
+ϕ = <span class="hljs-number">0.0</span>
+B_disc = [discretize(B_p_101, r, θ, ϕ) <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> r, θ <span class="hljs-keyword">in</span> θ] <span class="hljs-comment">#discretize 3D magnetic field at each r, θ, ϕ</span>
+Br = real.(getindex.(B_disc,<span class="hljs-number">1</span>)) <span class="hljs-comment">#get only the radial component and take real part only of the complex field.</span></code></pre>
+<p>We can plot this meridional slice, extending to <code>0 ≤ x ≤ 2</code>, <code>-2 ≤ y ≤ 2</code>.</p>
+<pre><code class="julia hljs"><span class="hljs-comment">#import and set theme</span>
+<span class="hljs-keyword">using</span> CairoMakie
+<span class="hljs-keyword">using</span> CatppuccinMakieThemes <span class="hljs-comment">#github.com/fgerick/CatppuccinMakieThemes.jl</span>
+_theme = CatppuccinMakieThemes.theme(CatppuccinMakieThemes.latte) <span class="hljs-comment">#or CatpuccinMakieThemes.mocha for the dark mode.</span>
+CairoMakie.set_theme!(_theme)
+div_colormap = :vik
+
+
+f = Figure(size=(<span class="hljs-number">400</span>,<span class="hljs-number">500</span>))
+ax = Axis(f[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], aspect=DataAspect())
+xlims!(ax,<span class="hljs-number">0</span>,rmax)
+ylims!(ax,-rmax,rmax)
+hidespines!(ax)
+hidedecorations!(ax)
+clim = maximum(abs,Br) <span class="hljs-comment">#get color limits</span>
+s = surface!(ax, x, y, Br, colormap=div_colormap, colorrange=(-clim,clim), shading=NoShading)
+Colorbar(f[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],s, vertical=<span class="hljs-literal">true</span>, label=<span class="hljs-string">L&quot;B_r&quot;</span>, flipaxis=<span class="hljs-literal">false</span>, height=<span class="hljs-number">400</span>)
+
+lines!(ax, sin.(θ), cos.(θ), color=_theme.textcolor, linestyle=:dash, linewidth=<span class="hljs-number">1</span>) <span class="hljs-comment">#plot r=1 half circle</span>
+f</code></pre>
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="/assets/figs/magfield_part2_br_Mocha.png" />
+<img src="/assets/figs/magfield_part2_br_Latte.png" />
+</picture>
+<h3 id="adding_streamlines"><a href="#adding_streamlines" class="header-anchor">Adding streamlines</a></h3>
+<p>In some cases it is useful and intuitive to illustrate the magnetic field lines. This is true, when a 2D description of the magnetic field is possible and therefore can be described by a stream function. For example, when the magnetic field is axisymmetric the field lines are two-dimensional at each meridional slice.</p>
+<p>We can define some help functions to convert spherical vectors to Cartesian &#40;needed for streamline plots&#41;.</p>
+<pre><code class="julia hljs"><span class="hljs-keyword">function</span> cart2sph(R)
+	x,y,z = R
+	r = sqrt(x^<span class="hljs-number">2</span>+y^<span class="hljs-number">2</span>+z^<span class="hljs-number">2</span>)
+	θ = atan(sqrt(x^<span class="hljs-number">2</span>+y^<span class="hljs-number">2</span>),z)
+	ϕ = atan(y,x)
+	<span class="hljs-keyword">return</span> (r,θ,ϕ)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">function</span> sph2cartvec(u,R)
+	r,θ,ϕ = R
+	ur,uθ,uϕ = u
+	ux = sin(θ)*cos(ϕ)*ur + cos(θ)*cos(ϕ)*uθ - sin(ϕ)*uϕ
+	uy = sin(θ)*sin(ϕ)*ur + cos(θ)*sin(ϕ)*uθ + cos(ϕ)*uϕ 
+	uz = cos(θ)*ur - sin(θ)*uθ
+	<span class="hljs-keyword">return</span> (ux,uy,uz)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">function</span> streamofb0(x,z, B0)
+	R = cart2sph((x,<span class="hljs-number">0</span>,z))
+	b = real.(sph2cartvec(Limace.Discretization.discretize(B0,R...),R))
+	<span class="hljs-keyword">return</span> Point2(b[<span class="hljs-number">1</span>],b[<span class="hljs-number">3</span>])
+<span class="hljs-keyword">end</span></code></pre>
+<p>And then simply add the streamlines to the previous plot axis <code>ax</code>: </p>
+<pre><code class="julia hljs">streamplot!(ax,(x,z)-&gt;streamofb0(x,z,B_p_101),-rmax..rmax,-rmax..rmax; color=x-&gt;_theme.textcolor[], arrow_size=<span class="hljs-number">10</span>,density=<span class="hljs-number">0.8</span>, alpha=<span class="hljs-number">0.3</span>, stepsize=<span class="hljs-number">0.01</span>, maxsteps=<span class="hljs-number">1_000_000</span>)
+f</code></pre>
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="/assets/figs/magfield_part2_br_with_stream_Mocha.png" />
+<img src="/assets/figs/magfield_part2_br_with_stream_Latte.png" />
+</picture>
+<h2 id="references"><a href="#references" class="header-anchor">References</a></h2>
+<ul>
+<li><p>Gerick, F. and Livermore, P. W. &#40;2024&#41;. <em>Interannual Magneto–Coriolis Modes and Their Sensitivity on the Magnetic Field within the Earth&#39;s Core</em>. <a href="https://doi.org/10.1098/rspa.2024.0184">Proc. R. Soc. A <strong>480</strong>, 20240184</a>.</p>
+</li>
+</ul>
+
+<p><a href="..">go back</a></p>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Felix Gerick. Last modified: April 19, 2025.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+  
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+          this.setAttribute('collapsed-symbol', '▶');
+        } else {
+          content.style.display = "block";
+          this.setAttribute('collapsed-symbol', '▼');
+        }
+      });
+    }
+  </script>
+</div><!-- CONTENT ENDS HERE -->
+    
+        
+
+
+
+    
+    
+        <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>
