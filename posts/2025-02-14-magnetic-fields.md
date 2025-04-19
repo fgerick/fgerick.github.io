@@ -159,8 +159,7 @@ We have recalled the definition of a magnetic field basis in terms of poloidal a
 One defintion of these scalar function, implemented in `Limace.jl` was outlined and we have setup our Julia environment to use `Limace.jl` and `CairoMakie.jl` to visualize a few degrees of the scalar functions. 
 From here, we are in the position to visualize the actual magnetic field.
 
-<!-- [Go to Part II of the series.](/posts/2025-02-14-magnetic-fields-part2) -->
-
+[Go to Part II of the series to plot meridional slices.](/posts/2025-04-19-magnetic-fields-part2)
 
 ## References
 \bibliography{}
