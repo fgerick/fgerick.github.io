@@ -7,7 +7,12 @@ tags = ["cv"]
 
 ## Academic positions
 
-#### Postdoctoral researcher (2023 - present)
+#### Postdoctoral researcher (2025 - present)
+*Institut de Physique du Globe de Paris*
+
+Within the [Geological Fluid Dynamics group](https://www.ipgp.fr/en/research/teams/dfg/).
+
+#### Postdoctoral researcher (2023 - 2025)
 *Centre National d'Études Spatiales*
 
 Within the group of Mioara Mandea.
@@ -52,7 +57,7 @@ Under the supervision of Joachim Saur.
 
 ## Grants & Scholarships
 
-#### 4D Earth Core Swarm project (2022 - present, Co-Investigator)
+#### 4D Earth Core Swarm project (2022 - 2025, Co-Investigator)
 *European Space Agency*
 
 #### Germany Scholarship (2016 - 2017, Principal Investigator)
