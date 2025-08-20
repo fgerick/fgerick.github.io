@@ -4,7 +4,9 @@ hascode = true
 tags = ["publications"]
 +++
 
-## Publications 
+## Publications
+
+**Gerick, F.**, and Mandea, M., 2025. Surface core flow dynamic pressure estimation. Geophysical Journal International. [10.1093/gji/ggaf321](https://doi.org/10.1093/gji/ggaf321) 
 
 **Gerick, F.**, 2025. Limace.jl: A Julia package to compute hydromagnetic modes in spherical domains. Journal of Open Source Software, 10(110), 7593. [10.21105/joss.07593](https://doi.org/10.21105/joss.07593)
 
