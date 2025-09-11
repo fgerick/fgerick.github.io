@@ -8,6 +8,11 @@ tags = ["cv"]
 ## Academic positions
 
 #### Postdoctoral researcher (2025 - present)
+*School of Earth and Environment, University of Leeds*
+
+Marie Skłodowska-Curie Actions (MSCA) postdoctoral fellowship within the [Deep Earth research group](https://environment.leeds.ac.uk/institute-geophysics-tectonics/doc/deep-earth).
+
+#### Postdoctoral researcher (2025)
 *Institut de Physique du Globe de Paris*
 
 Within the [Geological Fluid Dynamics group](https://www.ipgp.fr/en/research/teams/dfg/).
@@ -57,10 +62,13 @@ Under the supervision of Joachim Saur.
 
 ## Grants & Scholarships
 
-#### 4D Earth Core Swarm project (2022 - 2025, Co-Investigator)
+#### Marie Skłodowska-Curie Actions postdoctoral fellowship (2025 - 2027, PI)
+*Horizon Europe, European Commission*
+
+#### 4D Earth Core Swarm project (2022 - present, Co-PI)
 *European Space Agency*
 
-#### Germany Scholarship (2016 - 2017, Principal Investigator)
+#### Germany Scholarship (2016 - 2017, PI)
 *Federal Ministry of Education and Research of Germany*
 
 ## Awards
