@@ -6,6 +6,8 @@ tags = ["publications"]
 
 ## Publications
 
+**Gerick, F.**, Beggan, C., Brown .W, and Livermore, P., 2026. Geomagnetic exploration of Earth from space using Swarm and MSS-1: scientific advances and future plans. Astronomy & Geophysics, 67(5), 5.24-5.28. [10.1093/astrogeo/atag058](https://doi.org/10.1093/astrogeo/atag058)
+
 **Gerick, F.**, and Mandea, M., 2025. Surface core flow dynamic pressure estimation. Geophysical Journal International, 243(1), ggaf321. [10.1093/gji/ggaf321](https://doi.org/10.1093/gji/ggaf321) 
 
 **Gerick, F.**, 2025. Limace.jl: A Julia package to compute hydromagnetic modes in spherical domains. Journal of Open Source Software, 10(110), 7593. [10.21105/joss.07593](https://doi.org/10.21105/joss.07593)
@@ -43,6 +45,12 @@ von Papen, M., Dafsari, H., Florin, E., **Gerick, F.**, Timmermann, L., and Saur
 
 
 ## Conference Papers
+
+**Gerick, F.**, and Livermore., P., 2026. Modelling hydromagnetic modes in the Earth’s core. Invited talk, Astrophysical and Geophysical Fluid Dynamics Seminar, School of Mathematics, University of Leeds, Leeds, United-Kingdom
+
+**Gerick., F.**, 2025. Hydromagnetic waves in the Earth’s core. Invited talk, Institute of Geophysics and Tectonics Seminar, University of Leeds, Leeds, United-Kingdom
+
+**Gerick., F.**, 2025. Modelling and observing hydromagnetic modes. Invited talk, IAGA/IASPEI Joint Scientific Meeting 2025, Lisbon, Portugal
 
 **Gerick, F.**, and Livermore, P., 2024. Interannual Magneto-Coriolis modes and their sensitivity on the magnetic field within the Earth's core. Poster, Study of the Earth's Deep Interior, Great-Barrington 2024, United States.
 
